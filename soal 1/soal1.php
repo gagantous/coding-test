@@ -17,10 +17,7 @@ while (True) {
         continue;
       } else {
           $reset = True;
-          
           $arr[$index] = $rows[0];
-        //   $arr[$index][1] = $rows[$row+1];
-        //   $arr[$index]['selisih'] = ($row+1)-0;
           $index++;
           break;
       }
