@@ -3,25 +3,33 @@
 $input = fgets(STDIN);
 $rows = str_split(trim($input));
 $arr = array();
+$index = 0;
+
 while (True) {
     $reset = False;
     $ind = 0;
-    $index = 0;
     foreach ($rows as $row => $val) {
-      if($rows[0] != $rows[$row]) {
-         continue;
+    if(!isset($rows[$row+1])){
+        continue;
+    }
+      if($rows[0] !== $rows[$row+1]) {
+        $reset = True;
+        continue;
       } else {
           $reset = True;
           $arr[$index][0] = $rows[0];
-          $arr[$index][1] = $rows[$row];
+          $arr[$index][1] = $rows[$row+1];
+          $arr[$index][2] = "Sesuai";
+          //fetch key of the last element of the array.
+          $index++;
           break;
       }
     }
-    if ( ! $reset ) {
+    if (!$reset) {
         break; # break out of the while(true)
     }else{
         unset($rows[0]);
-        sort($rows);
+        $rows = array_values($rows);
     }
     # otherwise the foreach loop is `reset`
 }
