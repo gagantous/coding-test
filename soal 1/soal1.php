@@ -17,10 +17,10 @@ while (True) {
         continue;
       } else {
           $reset = True;
-          $arr[$index][0] = $rows[0];
-          $arr[$index][1] = $rows[$row+1];
-          $arr[$index][2] = "Sesuai";
-          //fetch key of the last element of the array.
+          
+          $arr[$index] = $rows[0];
+        //   $arr[$index][1] = $rows[$row+1];
+        //   $arr[$index]['selisih'] = ($row+1)-0;
           $index++;
           break;
       }
@@ -34,6 +34,6 @@ while (True) {
     # otherwise the foreach loop is `reset`
 }
 
-print_r($arr);
+echo "{$arr[0]} \n";
 
 ?>
