@@ -1,6 +1,5 @@
 <?php 
 
-
 $input = fgets(STDIN);
 $split = str_split($input);
 
