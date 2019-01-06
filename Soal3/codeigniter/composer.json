@@ -1,0 +1,12 @@
+{
+    "name": "450cc/codeigniter",
+    "require": {
+        "jenssegers/blade": "^1.1"
+    },
+    "authors": [
+        {
+            "name": "Gagantous",
+            "email": "fathinabdulhadi0@gmail.com"
+        }
+    ]
+}
